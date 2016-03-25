@@ -1,0 +1,99 @@
+\documentclass{beamer}
+
+%Packages
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+% Code
+\usepackage{listings}
+
+\lstdefinestyle{ShellCmd}{
+    language=bash,
+    basicstyle=\small\ttfamily,
+    backgroundcolor=\color{gray!10},
+    linewidth=0.9\linewidth,
+    breaklines=true
+}
+\newcommand\shellcmd[1]{\colorbox{gray!10}{\lstinline[style=ShellCmd,mathescape]`#1`}}
+
+% Hide navigation symbols, show git
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\newcommand{\inote}[1]{
+  {
+    \begin{itemize}
+      \item #1
+    \end{itemize}
+  }
+}
+
+% Logos
+\newcommand{\logoimage}[2]{\begingroup
+\setbox0=\hbox{\includegraphics[height=#2]{#1}}%
+\parbox{\wd0}{\box0}\endgroup\ }
+
+% Have a fancy git logo
+\newcommand{\git}{\logoimage{imgs/git_logo.png}{8pt}}
+
+%META-INFORMATION
+\title{Advanced \logoimage{imgs/git_logo}{40px}\\How it works (and why it is so complicated)}
+\author{Tom Wiesing}
+\institute{KWARC second hour talk}
+\date{March 29, 2016}
+
+\begin{document}
+    %TITLEPAGE
+    \frame{\titlepage}
+    
+    \begin{frame}{Overview}
+      \begin{itemize}
+          \item Introduction
+          
+          \item Git objects: How content is stored
+          \begin{itemize}
+            \item the ``filesystem'' of git
+            \item File objects
+            \item Tree objects
+            \item Commit objects
+          \end{itemize}
+          
+          \item References in git: Branches, Tags \& more
+          \begin{itemize}
+            \item the HEAD
+            \item Branches
+            \item Tags
+          \end{itemize}
+          
+          \item Merging \& Branching
+          \begin{itemize}
+            \item creating Branches
+            \item Merging and merge strategies
+          \end{itemize}
+          
+          \item Remotes, Pushing \& Pulling
+          \begin{itemize}
+            \item tracking remotes
+            \item pulling from remotes
+            \item pushing to remotes
+          \end{itemize}
+          
+          \item Conclusion: What git is and what it isn't
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}{The end}
+      {\huge
+        Thank you for your attention!\\
+        Any Questions, Comments, etc?
+      }
+      
+      \begin{itemize}
+        \item Image Sources: 
+        \begin{itemize}
+          \item \url{https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png}
+        \end{itemize}  
+      \end{itemize}
+      % https://git-scm.com/book/en/v2/
+    \end{frame}
+\end{document}
