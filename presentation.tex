@@ -9,24 +9,19 @@
 
 \lstdefinestyle{ShellCmd}{
     language=bash,
-    basicstyle=\small\ttfamily,
+    basicstyle=\fontsize{6.5pt}{7pt}\ttfamily,
     backgroundcolor=\color{gray!10},
     linewidth=0.9\linewidth,
-    breaklines=true
+    breaklines=true,
+    mathescape=false,
+    literate={\$}{{\textcolor{blue}{\$}}}1
 }
+
 \newcommand\shellcmd[1]{\colorbox{gray!10}{\lstinline[style=ShellCmd,mathescape]`#1`}}
 
 % Hide navigation symbols, show git
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}[frame number]
-
-\newcommand{\inote}[1]{
-  {
-    \begin{itemize}
-      \item #1
-    \end{itemize}
-  }
-}
 
 % Logos
 \newcommand{\logoimage}[2]{\begingroup
@@ -48,39 +43,42 @@
     
     \begin{frame}{Overview}
       \begin{itemize}
-          \item Introduction
+        \item The basics (what you should already know)
+        \begin{itemize}
+          \item What is git?
+          \item Working directory, index \& repository
+        \end{itemize}
           
-          \item Git objects: How content is stored
+          \item Object Storage (the ``filesystem'' of git)
           \begin{itemize}
-            \item the ``filesystem'' of git
-            \item File objects
-            \item Tree objects
-            \item Commit objects
+            \item BLOBs, Trees, Commits
           \end{itemize}
           
-          \item References in git: Branches, Tags \& more
+          \item References in git
           \begin{itemize}
-            \item the HEAD
-            \item Branches
-            \item Tags
+            \item HEADs, branches and tags
           \end{itemize}
           
-          \item Merging \& Branching
+          \item Remotes, Pushing \& Pulling (what we really want to use)
           \begin{itemize}
-            \item creating Branches
-            \item Merging and merge strategies
+            \item Tracking remotes
+            \item Fetching
+            \item Pushing \& Pulling
+          \end{itemize}
+                   
+          \item Merging \& Branching (the fun part)
+          \begin{itemize}
+            \item the easy part: branching
+            \item Merging \& Merge strategies
+            \item Rebasing (in contrast to merging)
           \end{itemize}
           
-          \item Remotes, Pushing \& Pulling
-          \begin{itemize}
-            \item tracking remotes
-            \item pulling from remotes
-            \item pushing to remotes
-          \end{itemize}
-          
-          \item Conclusion: What git is and what it isn't
+          \item Conclusion (What git is and what it is not)
       \end{itemize}
     \end{frame}
+    
+    \input{parts/01_intro.tex}
+    \input{parts/02_objects.tex}
 
     \begin{frame}{The end}
       {\huge
@@ -92,6 +90,12 @@
         \item Image Sources: 
         \begin{itemize}
           \item \url{https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png}
+          \item
+          \url{https://git-scm.com/book/en/v2/book/10-git-internals/images/data-model-1.png}
+          \item
+          \url{https://git-scm.com/book/en/v2/book/10-git-internals/images/data-model-2.png}
+          \item
+          \url{https://git-scm.com/book/en/v2/book/10-git-internals/images/data-model-3.png}
         \end{itemize}  
       \end{itemize}
       % https://git-scm.com/book/en/v2/
