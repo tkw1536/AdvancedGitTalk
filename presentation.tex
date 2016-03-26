@@ -56,21 +56,13 @@
           
           \item References in git
           \begin{itemize}
-            \item HEADs, branches and tags
-          \end{itemize}
-          
-          \item Remotes, Pushing \& Pulling (what we really want to use)
-          \begin{itemize}
-            \item Tracking remotes
-            \item Fetching
-            \item Pushing \& Pulling
+            \item HEADs, Branches, TAGs
           \end{itemize}
                    
-          \item Merging \& Branching (the fun part)
+          \item Merging \& Remotes (the fun part)
           \begin{itemize}
-            \item the easy part: branching
-            \item Merging \& Merge strategies
-            \item Rebasing (in contrast to merging)
+            \item Merging \& Rebasing
+            \item Remotes: Fetch, Push \& Pull
           \end{itemize}
           
           \item Conclusion (What git is and what it is not)
@@ -79,7 +71,19 @@
     
     \input{parts/01_intro.tex}
     \input{parts/02_objects.tex}
-
+    \input{parts/03_refs.tex}
+    \input{parts/04_merging.tex}
+    
+    \begin{frame}{Conclusion}
+      \begin{itemize}
+        \item git is very powerful and useful
+        \item git started as a toolkit for a VCS and by now has a more or less user friendly interface
+        \item in order to use it properly it is important to understand the underlying model
+        \item using git should not be only running memorized commands
+      \end{itemize}
+    \end{frame}
+    
+    
     \begin{frame}{The end}
       {\huge
         Thank you for your attention!\\
@@ -87,16 +91,7 @@
       }
       
       \begin{itemize}
-        \item Image Sources: 
-        \begin{itemize}
-          \item \url{https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png}
-          \item
-          \url{https://git-scm.com/book/en/v2/book/10-git-internals/images/data-model-1.png}
-          \item
-          \url{https://git-scm.com/book/en/v2/book/10-git-internals/images/data-model-2.png}
-          \item
-          \url{https://git-scm.com/book/en/v2/book/10-git-internals/images/data-model-3.png}
-        \end{itemize}  
+        \item This talk has been adapted from the Pro Git book (by Scott Chacon and Ben Straub). It is licensed under Creative Commons Attribution Non Commercial Share Alike 3.0 license. 
       \end{itemize}
       % https://git-scm.com/book/en/v2/
     \end{frame}
