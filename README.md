@@ -1,4 +1,4 @@
-This repository contains the (yet to be given and still unfinished) talk: Advanced Git: How it works (and why it is so complicated)
+This repository contains the (yet to be given) talk: Advanced Git: How it works (and why it is so complicated)
 
 &copy; Tom Wiesing 2016
 
